@@ -18,7 +18,7 @@
         <%= sanitize(product.description) %>
         <div class="price_line">
     <!-- START:currency -->
-          <span class="price"><%= number_to_currency(product.price) %></span>
+          <span class="price"><%= number_to_pounds(product.price) %></span>
     <!-- END:currency -->
         </div>
       </div>
