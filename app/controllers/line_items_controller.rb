@@ -54,6 +54,8 @@ class LineItemsController < ApplicationController
   # PATCH/PUT /line_items/1.json
   def update
     respond_to do |format|
+      product = Product.find(params[:product_id])
+      @line_item = @cart.remove_product(product.id)
       if @line_item.update(line_item_params)
         format.html { redirect_to @line_item, notice: 'Line item was successfully updated.' }
         format.json { head :no_content }
@@ -69,7 +71,7 @@ class LineItemsController < ApplicationController
   def destroy
     @line_item.destroy
     respond_to do |format|
-      format.html { redirect_to line_items_url }
+      format.html { redirect_to @line_item.cart }
       format.json { head :no_content }
     end
   end
