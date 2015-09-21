@@ -24,7 +24,7 @@
     <!-- START:currency -->
           <span class="price"><%= number_to_pounds(product.price) %></span>
     <!-- END:currency -->
-          <%= button_to 'Add to Cart', line_items_path(product_id: product) %>
+          <%= button_to 'Add to Cart', line_items_path(product_id: product), class: "buttonNormalStyles" %>
         </div>
       </div>
 <!-- START_HIGHLIGHT -->

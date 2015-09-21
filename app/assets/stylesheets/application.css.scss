@@ -39,11 +39,12 @@ body{
  }
 
  #notice {
-   color: $grey !important;
-   border: 2px solid red;
+   color: #fff !important;
+   border: 0px;
+   border-radius: 4px;
    padding: 1em;
    margin-bottom: 2em;
-   background-color: $pink;
+   background-color: $darkBlue;
    font: bold smaller sans-serif;
  }
 
@@ -73,5 +74,23 @@ body{
        }
      }
    }
+ }
+ .buttonAlertStyles{
+   background-color: $grey;
+   border-radius: 4px;
+   border: solid 0px;
+   padding: 8px;
+   color:$lightBlue;
+   margin-top: 5px;
+   margin-bottom: 5px;
+ }
+ .buttonNormalStyles{
+   background-color: $lightBlue;
+   border-radius: 4px;
+   border: solid 0px;
+   padding: 8px;
+   color:#fff;
+   margin-top: 5px;
+   margin-bottom: 5px;
  }
  /* END_HIGHLIGHT */
