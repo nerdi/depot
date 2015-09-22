@@ -55,7 +55,6 @@ class LineItemsController < ApplicationController
   def update
     respond_to do |format|
       product = Product.find(params[:product_id])
-      @line_item = @cart.remove_product(product.id)
       if @line_item.update(line_item_params)
         format.html { redirect_to @line_item, notice: 'Line item was successfully updated.' }
         format.json { head :no_content }
